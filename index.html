@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <title>تذاكر | tzaker</title>
+    <meta name="descript" content="Event Orginize" />
+     <link rel="stylesheet" href="style.css">
+    <!-- title el website -->
+</head>
+<body>
+   <header>
+    <h1 class="header">Tzaker</h1>
+    <ul class="nav">
+        <li>Home</li>
+        <li>About us</li> 
+    </ul>
+   </header>
+   <figure class ="eventpic">
+    <img src = "crystal.jpg" alt=""> 
+    <figcaption>Events Organization</figcaption>
+   </figure>
+   <hr/>
+    <section>
+    <p class="event-list-title">Events List</p>
+    <ul class="events">
+        <li>
+            <div class="eventlist">
+           <span> Birthday Event </span>
+            <img src="images/Event1.jpg" alt="Event 1" width="100" height="100">
+            </div>
+        </li>
+        <li>
+            <div class="eventlist">
+            <span> Music Concert </span>
+            <ul class="stands">
+                <li>Stand 1</li>
+                <li>Stand 2</li>
+            </ul>
+            <img src="images/event2.jpg" alt="Event 2" width="100" height="100">
+            </div>
+        </li>
+        <li>
+            <div class="eventlist">
+            <span> Conference </span>
+            <img src="images/event3.jpg" alt="Event 3" width="100" height="100">
+            </div>
+        </li>
+         <li>
+            <div class="eventlist">
+            <span> Wedding </span>
+            <img src="images/event4.jpg" alt="Event 4" width="100" height="100">
+            </div>
+        </li>
+      </ul> 
+    </section>
+    <!-- el price -->
+    <table>
+        <tbody class="price">
+            <tr>
+                <td>Birthday Event</td>
+                <td>600$</td>
+            </tr>
+            <tr>
+                <td>Music Concert</td>
+                <td>3500$</td>
+            </tr>
+            <tr>
+                <td>Conference</td>
+                <td>800$</td>
+            </tr>
+            <tr>
+                <td>Wedding</td>
+                <td>1000$</td>
+            </tr>
+        </tbody>
+    </table>
+    <form id ="eventForm">
+        <div>
+            <input type="radio" id="D1" name="event" value="D1">
+            <label for="D1">Birthday Event</label> 
+        </div>
+        <div>
+            <input type="radio" id="D2" name="event" value="D2">
+            <label for="D2">Music Concert</label>
+            <select name ="stand" id="stand">
+            <option value="Stand 1">stand 1</option>
+            <option value="Stand 2">stand 2</option>
+            </select>
+        </div>
+        <div>
+            <input type="radio" id="D3" name="event" value="D3">
+            <label for="D3">Conference</label>
+        </div>
+        <div>
+            <input type="radio" id="D4" name="event" value="D4">
+            <label for="D4">Wedding</label>
+        </div>
+        <div>
+            <input type="submit" id="checkBtn" value="Submit">
+        </div>
+    </form>
+    <footer>
+        <div class="footer-main">
+        <p> CEO : Mohamed Tarek Mostafa</p>
+        <p><a href="mailto:mohamedtarekmostafa2005@gmail.com">Contact us</a></p>
+        </div>
+        <div class="footer-text">
+        <p> &copy; 2025 Tzaker </p>
+            <p> ITI </p>
+        </div>
+
+    </footer>
+   <script>
+const form = document.getElementById("eventForm");
+const checkBtn = document.getElementById("checkBtn");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const selectedEvent = document.querySelector("input[name='event']:checked");
+
+  if (!selectedEvent) {
+    alert("Must select an event");
+    return;
+  }
+  checkBtn.classList.add("success-btn");
+  checkBtn.value = "Success";
+  checkBtn.disabled = true;
+   selectedEvent.checked = false;
+});
+
+</script>
+</body>
+</html>
