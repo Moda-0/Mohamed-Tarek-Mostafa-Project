@@ -129,7 +129,7 @@ header .nav li:hover {
 }
 
 .events li:hover img {
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
 
@@ -141,23 +141,15 @@ header .nav li:hover {
   justify-content: center;
   gap: 12px;
 }
-
-table {
-  width: 400px;
-  margin: 20px auto;
-  border-collapse: collapse;     
-  background: #02a9be33;          
-  border-radius: 12px;           
-  overflow: hidden;            
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
-}
-
-table td {
-  padding: 14px 18px;
-  font-size: 16px;
-  text-align: center;
-  color: #000000;
-  border-bottom: 1px solid #7ab1ca; 
+.price {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #027e90;
+  background: #e0f7fa00;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 8px;
 }
 
 form {
