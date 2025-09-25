@@ -20,6 +20,15 @@ header .hreader {
   margin: 0;
 }
 
+header a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+header a:hover {
+  color: #00ffff;
+}
+
 header .nav {
   list-style: none;
   display: flex;
